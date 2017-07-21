@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AlertDialog;
@@ -15,6 +16,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 
@@ -138,6 +141,25 @@ public class MainActivity extends AppCompatActivity implements UpdateList{
     public void updateList() {
 
         bindList();
+
+    }
+
+    public void passData(){
+
+      /*  //----(Sending data)------//
+        Intent mIntent = new Intent(mActivity, ForexAcademyLessonsDetailActivity.class);
+        Gson gson = new Gson();
+        String json = gson.toJson(allCoursesList.get(CoursePosition));
+        mIntent.putExtra("FxSingleCourseData", json);
+        mIntent.putExtra("LessonPosition", position);
+        mActivity.startActivity(mIntent);
+
+        //--------(Receiving Data)------//
+
+        Gson gson = new Gson();
+        mFxAcademyCoursesListModel = gson.fromJson(getIntent().getStringExtra("FxSingleCourseData"), ForexAcademyCoursesModel.CoursesBean.CourseBean.class);
+        LessomnPosition = getIntent().getIntExtra("LessonPosition", 0);*/
+
 
     }
 }
